@@ -14,8 +14,3 @@ Scripts
 - build: build the application
 - lint: check for linting errors
 - expose: build the app and expose the web-component on local web server
-
-Env Variables:
----
-- VITE_ENABLE_MSW: enable or disable MSW, for mocking a Rest API
-- VITE_REMINDERS_API: the path for the Rest API

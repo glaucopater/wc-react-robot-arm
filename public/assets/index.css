@@ -1,0 +1,1 @@
+.robot-arm{width:200px;border:1px dashed #111}.robot-arm>img{width:200px}.move-hand{animation:moveHand 1s infinite alternate}@keyframes moveHand{0%{transform:rotate(0)}to{transform:rotate(20deg)}}

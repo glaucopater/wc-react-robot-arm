@@ -5,11 +5,11 @@ import r2wc from "@r2wc/react-to-web-component";
 
 import * as appPackage from "../package.json";
 
-export const WebReminders = r2wc(App);
+export const WebRobotArm = r2wc(App);
 
 if (import.meta.env.MODE === "production") {
-  console.info("web-reminders mfe is connected ver:", appPackage.version);
-  customElements.define("web-reminders", WebReminders);
+  console.info("web-robot-arm mfe is connected ver:", appPackage.version);
+  customElements.define("web-robot-arm", WebRobotArm);
 } else {
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
