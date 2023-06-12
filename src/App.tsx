@@ -1,38 +1,23 @@
-import { useEffect, useState } from "react";
-import { CardList } from "./components/CardList";
-import { mockData } from "./mocks/handlers";
-import { CustomCardProps } from "./components/CustomCard";
+import robotArm from "./assets/robotic-arm.svg";
 import "./App.css";
-import AddReminder from "./components/AddReminderButton";
+import { useEffect } from "react";
 
 function App() {
-  const [currentData, setCurrentData] = useState<CustomCardProps[]>(mockData);
-
   useEffect(() => {
-    logJSONData();
+    const robotArm = document.querySelector(".robot-arm") as HTMLImageElement;
+
+    const handleMouseOver = () => {
+      robotArm.classList.toggle("move-hand");
+    };
+
+    robotArm.addEventListener("mouseover", handleMouseOver);
+
+    return () => robotArm.removeEventListener("mouseover", handleMouseOver);
   }, []);
 
-  async function logJSONData() {
-    if (import.meta.env.VITE_REMINDERS_API) {
-      const response = await fetch(import.meta.env.VITE_REMINDERS_API);
-      const jsonData = await response.json();
-      setCurrentData(jsonData);
-    } else console.warn("Missing API!");
-  }
-
-  const handleFetchData = () => {
-    logJSONData();
-  };
-
-  const setToDoneReminder = (id: string) => {
-    setCurrentData(currentData.filter((reminder) => reminder.id !== id));
-  };
-
   return (
-    <div className="h-screen p-2 rounded flex flex-col border border-white w-52">
-      <button onClick={handleFetchData}>Reload data</button>
-      <CardList cards={currentData} setToDoneReminder={setToDoneReminder} />
-      <AddReminder />
+    <div className="robot-arm">
+      <img src={robotArm} className="right-robot-arm" alt="robot arm" />
     </div>
   );
 }

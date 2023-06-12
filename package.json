@@ -11,20 +11,14 @@
     "expose": "yarn build && http-server dist --cors "
   },
   "dependencies": {
-    "@highlight-ui/card": "^4.1.33",
     "@r2wc/react-to-web-component": "^2.0.2",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.3.2",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@highlight-ui/accordion": "^3.4.35",
-    "@highlight-ui/file-management": "^2.5.31",
-    "@highlight-ui/tokens": "^3.0.0",
-    "@highlight-ui/typography": "^6.0.0",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
@@ -34,11 +28,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "http-server": "^14.1.1",
-    "msw": "^1.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }
