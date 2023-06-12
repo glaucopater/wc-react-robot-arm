@@ -5,11 +5,11 @@ import r2wc from "@r2wc/react-to-web-component";
 
 import * as appPackage from "../package.json";
 
-export const WebRobotArm = r2wc(App);
+export const WebComponentRobotArm = r2wc(App);
 
 if (import.meta.env.MODE === "production") {
-  console.info("web-robot-arm mfe is connected ver:", appPackage.version);
-  customElements.define("web-robot-arm", WebRobotArm);
+  console.info("wc-react-robot-arm mfe is connected ver:", appPackage.version);
+  customElements.define("wc-react-robot-arm", WebComponentRobotArm);
 } else {
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>

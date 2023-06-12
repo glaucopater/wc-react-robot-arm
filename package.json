@@ -1,7 +1,7 @@
 {
-  "name": "reminders-webcomponent",
+  "name": "wc-react-robot-arm",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
