@@ -1,4 +1,4 @@
-# reminders-web-component
+# wc-react-robot-arm
 A Robot Arm Web Component build with React, TypeScript, @r2wc/react-to-web-component
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6d2f543e-440c-4758-90b4-2b69999339a4/deploy-status)](https://app.netlify.com/sites/resonant-swan-bd2064/deploys)
